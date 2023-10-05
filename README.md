@@ -1,7 +1,7 @@
 # Nautilus_Trader_Jerry_fall_2023
-Nautilus_Trader_Jerry_fall_2023 is a customized verision of Nautilus trader by Jerry Li opensourced on Fall 2023
-This project is for non-profit purposes as research and educations
-For investments contact zr7goat@gmail.com
+Nautilus_Trader_Jerry_fall_2023 is a customized verision of Nautilus trader by Jerry Li opensourced on Fall 2023.
+This project is for non-profit purposes as research and educations.
+For investments and other in-depth communication, please contact zr7goat@gmail.com
 
 nautilus-trader       1.171.0 
 --------------
