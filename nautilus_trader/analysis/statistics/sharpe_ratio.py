@@ -29,7 +29,7 @@ class SharpeRatio(PortfolioStatistic):
 
     Parameters
     ----------
-    period : int, default 252
+    period : int, default 252  # 252 trading days in a year in general markets, can be changed to 365 for crypto
         The trading period in days.
     """
 

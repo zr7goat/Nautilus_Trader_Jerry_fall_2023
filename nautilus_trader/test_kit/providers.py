@@ -395,6 +395,53 @@ class TestInstrumentProvider:
         )
 
     @staticmethod
+    def btcusdt_future_OKX(expiry: Optional[date] = None, maker: Decimal = 0.00001,
+                           taker: Decimal = 0.0000143) -> CryptoFuture:
+        """
+        Return the OKX BTCUSDT instrument for backtesting.
+
+        Parameters
+        ----------
+        expiry : date, optional
+            The expiry date for the contract.
+        maker : Decimal,`optional`, maker transaction fee
+        taker : Decimal,`optional`, taker transaction fee
+
+        Returns
+        -------
+        CryptoFuture
+
+        """
+        if expiry is None:
+            expiry = date(2022, 3, 25)
+        return CryptoFuture(
+            instrument_id=InstrumentId(
+                symbol=Symbol(f"BTCUSDT_{expiry.strftime('%y%m%d')}"),
+                venue=Venue("OKX"),
+            ),
+            native_symbol=Symbol("BTCUSDT"),
+            underlying=BTC,
+            quote_currency=USDT,
+            settlement_currency=USDT,
+            expiry_date=expiry,
+            price_precision=2,
+            size_precision=6,
+            price_increment=Price(1e-02, precision=2),
+            size_increment=Quantity(1e-06, precision=6),
+            max_quantity=Quantity(9000, precision=6),
+            min_quantity=Quantity(1e-06, precision=6),
+            max_notional=None,
+            min_notional=Money(10.00000000, USDT),
+            max_price=Price(1000000, precision=2),
+            min_price=Price(0.01, precision=2),
+            margin_init=Decimal(0),
+            margin_maint=Decimal(0),
+            maker_fee=maker,
+            taker_fee=taker,
+            ts_event=0,
+            ts_init=0,
+        )
+    @staticmethod
     def equity(symbol: str = "AAPL", venue: str = "NASDAQ"):
         return Equity(
             instrument_id=InstrumentId(symbol=Symbol(symbol), venue=Venue(venue)),

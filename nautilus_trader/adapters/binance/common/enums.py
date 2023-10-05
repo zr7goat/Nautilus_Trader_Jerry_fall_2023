@@ -112,8 +112,8 @@ class BinanceAccountType(Enum):
     SPOT = "SPOT"
     MARGIN_CROSS = "MARGIN_CROSS"
     MARGIN_ISOLATED = "MARGIN_ISOLATED"
-    FUTURES_USDT = "FUTURES_USDT"
-    FUTURES_COIN = "FUTURES_COIN"
+    FUTURES_USDT = "FUTURES_USDT"  # USDT-M futures
+    FUTURES_COIN = "FUTURES_COIN"  # COIN-M futures
 
     @property
     def is_spot(self):

@@ -73,7 +73,7 @@ node = TradingNode(config=config_node)
 
 # Configure your strategy
 strat_config = VolatilityMarketMakerConfig(
-    instrument_id="ETHUSDT-PERP.BINANCE",
+    instrument_id="ETHUSDT-PERP.BINANCE",  # Q to be solved: is this defined in a file of NT or just defined here by the user?
     bar_type="ETHUSDT-PERP.BINANCE-1-MINUTE-LAST-EXTERNAL",
     atr_period=20,
     atr_multiple=6.0,
